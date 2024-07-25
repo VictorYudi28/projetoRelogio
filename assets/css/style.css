@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.bg{
+    background: radial-gradient(circle at top right, #ff8a00, red, #e52e71);
+}
+
+.bg2{
+    background: radial-gradient(circle at top right, #0bb9f3, rgb(144, 0, 255), #7fe000);
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.hours,.minutes,.seconds{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #151515;
+    border-radius: 30px;
+    width: 20%;
+    height: 200px;
+}
+
+.transition{
+    transition: 0.5s all;
+}
+
+.transition:hover{
+    transform: scale(1.1);
+}
+
+.number{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.title{
+    font-size: 1.2rem;
+}
+
+.number,.title{
+    color: #FFF;
+}
+
+.button-change-color{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #FFF;
+    cursor: pointer;
+    background-color: #151515;
+    border: 1px solid transparent;
+    transition: 0.5s all;
+}
+
+.button-change-color:hover{
+    background-color: transparent;
+    border: 1px solid #151515;
+}
+
+@media(max-width: 1024px){
+
+    .hours,.minutes,.seconds{
+        width: 33%;
+        height: 150px;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .font-number{
+        font-size: 30px;
+    }
+
+    .font-title{
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 418px){
+
+    .clock{
+        gap: 10px;
+    }
+
+    .hours,.minutes,.seconds{
+        width: 33%;
+        height: 100px;
+    }
+
+    .font-number{
+        font-size: 25px;
+    }
+
+    .font-title{
+        font-size: 15px;
+    }
+
+    .container{
+        padding: 0 10px;
+    }
+
+}
